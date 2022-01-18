@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec"http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Login</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo-dueno">ADOGCATME</h1>
+        <div class="logo-dueno"><img src="/assets/logo.png" alt="" /></div>
+    </header>
+    <main class="main-dueno">
+        <div class="navegadores">
+            <nav class="navLogin">
+                <a th:href="@{/}" class="btn a">Volver a Home</a>
+                <a th:href="@{/registro/usuario}" class="btn a">Ir a Registro</a>
+            </nav>
+        </div>
+        <div class="inicio-sesion">
+            <div class="subt-dueno">
+                <h2>Inicia Sesion</h2>
+            </div>
+            <form th:action="@{/logincheck}" method="POST" class="A">
+                <p th:if="${error != null}" th:text="${error}" style="color: white"></p>
+                <div>   
+                    <input type="text" name="usuario" placeholder="Ingresa tu usuario">
+                </div>
+                <div>
+                    <input type="password" name="contrasena"  placeholder="Ingresa tu contraseña">
+                </div>
+                <div class="enviar">
+                    <input type="submit" value="Iniciar Sesion" class="btn boton1" />
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

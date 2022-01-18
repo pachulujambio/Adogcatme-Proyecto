@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    
+    <link rel="stylesheet" href="/css/perfil-dueno-adopt-styles.css">
+    <title>Perfil</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">ADOGCATME</h1>
+        <div class="img-logo">
+            <img src="/assets/logo.png" alt="">
+        </div>
+    </header>
+
+    <main>
+        
+        <div >
+            <div class="header-perfil">
+                <img class="logo-perfil" src="/assets/foto-perfil.png"/>
+                <h1 class="nombre-perfil"> UserName </h1>
+            </div>
+            <div class="perfil">
+                
+                <div class="column">
+                    <div class="titulos">
+                        <img class="profile-pic" src="/assets/deter.png" alt="No Profile Pic"/>
+
+                        <h3> Nombre: </h3>
+                        <h3>Barrio</h3>
+                        <h3>Telefono:</h3>
+                        <h3>Mail:</h3>
+                    </div>
+                </div>
+                    
+                    <div class="descr-coint">
+                        <div class="x"> 
+                            <img src="/assets/owner.png"/>
+                            <img src="/assets/owner2.png"/>
+                            <img src="/assets/owner3.png"/>
+                        </div>   
+                    </div>
+                    
+                    <div class="info">
+                        <h2 th:text="${dueno.nombre}">No Name</h2>
+                        <h2 th:text="${dueno.barrio}">No Location</h2>
+                        <h2 th:text="${dueno.telefono}">No Number</h2>
+                        <h2 th:text="${dueno.email}">No Mail</h2>
+                    </div>
+
+                    <div class="buton">
+                        <button class="volver" type="button"> 
+                            <nav>
+                                <a th:href="@{/adoptante/perfilmascota/__${mascota.id}__}">Volver a Perfil Mascota</a>
+                            </nav>
+                        </button>
+                    </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

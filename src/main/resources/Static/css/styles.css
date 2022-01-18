@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #8e9aaf;
+    width: 100vw;
+    height: 100vh;
+    cursor: url("../asset/pata.png");
+}
+
+header{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    background-color: #F4A261;
+    height: 25%;
+    width: 100%;
+}
+
+main{
+    width: 100%;
+    height: 75%;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+    display: flex;
+}
+
+h1{
+    font-size: 80px;
+}
+.perro{
+    margin-left: 400px;    
+}
+.gato{
+    margin-right: 400px;
+}
+
+.spam{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.logo{
+    align-self: center;
+    width: 100%;
+    height: auto;
+}
+
+
+.logo-container{
+    width: 30%;
+}
+
+.boton-adop{
+    border-radius: 50px;
+    font-size: 50px;
+    width: 100%;
+    height: 100px;
+    background-color: #E9C46A;
+}
+
+.boton-adop:hover{
+    background-color: #eed490;
+}
+
+.container-botom{
+    width: 25%;
+    height: 20%;
+}
+
+.boton-dueno{
+    font-size: 50px;
+    border-radius: 50px;
+    width: 100%;
+    height: 100px;
+    background-color: #E76F51;
+}
+
+.boton-dueno:hover{
+    background-color: #ed9078;
+}
+nav a{
+    text-decoration: none!important;
+    font-family:'Poppins', sans-serif!important;
+    color: black!important;
+}
+
+.titulo-dueno {
+    text-align: end;
+    width: 65%;
+}
+.logo-dueno {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.logo-dueno img {
+    width: 30%;
+}
+.main-dueno {  
+
+}
+.inicio-sesion /*, .formulario*/ {
+    
+    height: 53%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 75%;
+    /*margin-bottom: 150px;*/
+    margin-left: 100px;
+    border-radius: 5px;
+ 
+}
+form{
+    height: 70%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+ 
+form>div {
+    
+    width: 70%;
+
+}
+input{
+    
+    height: 100%;
+    width: 100%;
+}
+.enviar, .registrarse{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inicio-sesion{
+    background-color: #ed9078;
+    border-radius: 2%;
+    width: 55%;
+}
+.subt-dueno {
+    background-color: #e76a4b;
+    border-radius: 3px;
+    width: 50%;
+    text-align: center;
+}
+.formulario{
+    background-color:#E9C46A;
+    width: 50%;
+    height: 70%;
+}
+.contenedorSubt-duenoB{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subt-duenoB{
+    background-color:#dea821;
+    width: 60%;
+    border-radius: 1%;
+}
+.A>div>input {
+    background-color: #fcece9 ;
+}
+.B>div>input {
+    background-color: #f8eed3;
+}
+
+.boton1:hover, .boton2:hover{
+    border: 1px solid black;
+}
+.boton1,.boton2 {
+    width: 50%;
+}
+
+*.formulario{
+    border-radius: 2%;
+}
+.navegadores, .navegadoresB {
+    background-color: #E9C46A;
+    border-radius: 2%;
+    height:40%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.navegadoresB {
+    background-color:#ed9078!important ;
+}
+.navLogin {
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.a {
+    background-color:#f8eed3;
+    display: inline-block;
+    align-items: center;
+    height: 25%;
+}
+.a:hover{
+    border: 1px solid black;
+    background-color: white;
+}

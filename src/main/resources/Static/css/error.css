@@ -1,0 +1,23 @@
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f4a261;
+    font-family: "Poppins", sans-serif;
+  }
+
+.error-cont{
+    border-radius: 20px;
+    background-color: #f08228;
+    padding: 15px;
+    display: table;
+    position: relative;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -40%);
+}
+.img{
+    margin-left:30% ;
+    margin-right: 20%;
+    margin-bottom: 20px;
+}

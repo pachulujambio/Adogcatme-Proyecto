@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec"http://www.thymeleaf.org/extras/spring-security">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perfil Dueño</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/perfil-adop-edicion.css">
+</head>
+
+<body>
+    <header>
+        <h1>ADOGCATME</h1>
+        <div class="img-logo"><img src="/assets/logo.png"></div>
+    </header>
+
+
+    <main>
+        <div class="contenedor">
+            <div class="contenido">
+                <div class="titulo">
+                    <h3>Mis datos</h3>
+                </div>
+
+
+
+                <div class="datos-a-editar">
+                    <form th:action="@{/adoptante/editarAdoptante}" method="POST" th:object="${adoptante}" class="B"
+                        enctype="multipart/form-data">
+                        <div class="nombre">
+                            <label for="nombre" >Nombre</label>
+                            <input type="text" id="nombre" th:field="*{nombre}" th:value="*{nombre}">
+                        </div>
+
+                        <div class="usuario">
+                            <label for="usuario">Nombre de Usuario</label>
+                            <input type="text" id="usuario" th:field="*{usuario}" th:value="*{usuario}">
+                        </div>
+
+                        <div class="telefono">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="number" id="telefono" th:field="*{telefono}" th:value="*{telefono}">
+                        </div>
+
+                        <div class="ubicacion">
+                            <label for="ubicacion">Distrito:</label>
+                            <select id="ubicacion" name="barrio">
+                                <option th:field="*{barrio}" value="distrito norte">Distrito Norte</option>
+                                <option th:field="*{barrio}" value="distrito sur">Distrito Sur</option>
+                                <option th:field="*{barrio}" value="distrito centro">Distrito Centro</option>
+                                <option th:field="*{barrio}" value="distrito este">Distrito Este</option>
+                                <option th:field="*{barrio}" value="distrito oeste">Distrito Oeste</option>
+                            </select>
+                        </div>
+
+                        <div class="usuario">
+                            <label for="direccion">Direccion:</label>
+                            <input type="text" id="direccion" th:field="*{direccion}" th:value="*{direccion}">
+                        </div>
+
+                        <div class="mail">
+                            <label for="email">Dirección de correo electrónico:</label>
+                            <input type="text" id="email" th:field="*{email}" th:value="*{email}">
+                        </div>
+
+
+                        <div>
+                            <input type="hidden" name="id" placeholder="id" th:field="*{id}" th:value="*{id}">
+                        </div>
+                        <div>
+                            <input type="hidden" name="Rol" placeholder="Rol" th:field="*{Rol}" th:value="*{Rol}">
+                        </div>
+
+
+                        <input type="hidden" id="contrasena" th:field="*{contrasena}" th:value="*{contrasena}">
+                        <div class="button-container">
+                            <button type="submit" class="btn-actualizar">
+                                Actualizar Información
+                            </button>
+                            <button type="button" class="btn-cancelar">
+                                <nav>
+                                    <a th:href="@{/adoptante/perfil}">Cancelar</a>
+                                </nav>
+                            </button>
+                        </div>
+                </div>
+
+
+            </div>
+
+            </form>
+        </div>
+
+
+        </div>
+    </main>
+</body>
+
+</html>

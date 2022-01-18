@@ -1,0 +1,31 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f4a261;
+    font-family: "Poppins", sans-serif;
+  }
+
+img{
+    width: 100px;
+    position: relative;
+    left: 10%;
+    transform: translate(-10%, 0);
+}
+
+.btn {
+    position: absolute;
+    left: 70%;
+    top: 20%;
+    transform: translate(-70%, -20%);
+}
+
+.container{
+    width:  500px;
+    border-radius: 20px;
+    background-color: #f08228;
+    padding: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

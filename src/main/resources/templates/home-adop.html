@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec"http://www.thymeleaf.org/extras/spring-security">
+
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+        <link rel="stylesheet" href="/css/home-adop.css" />
+        <title>Mascotas para adoptar</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>ADOGCATME</h1>
+            <div class="img-adop"><img src="/assets/logo.png" alt="" /></div>
+        </header>
+        <main>
+            <div class="navegador">
+                <nav class="menu">
+                    <a th:href="@{/adoptante/perfil}" class="btn">Mi Perfil</a>
+                    <a th:href="@{/adoptante/solicitudes}" class="btn">Mis Solicitudes</a>
+                    <a th:href="@{/logout}" class="btn">Cerrar Sesion</a>
+                </nav>
+            </div>
+            <div class="form">
+                <h3>Filtros</h3>
+                <form th:action="@{/adoptante/home}" method="GET">
+                    <div class="form-A">
+                        <div class="tipo-masc">
+                            <label for="tipoMascota">Tipo de mascota</label>
+                            <select name="tipo" id="tipo">
+                                <option value="perro">Perro/a</option>
+                                <option value="gato">Gato/a</option>
+                                <option value="otro">Otro/a</option>
+                            </select>
+                        </div>
+                        <div class="raza-masc">
+                            <label for="raza">Raza:</label>
+                            <input type="text" name="raza" id="raza"/>
+                        </div>
+                        <div class="edad-masc">
+                            <label for="edad">Edad:</label>
+                            <input type="number" name="edad" id="edad"/>
+                        </div>
+                    </div>
+                    <div class="form-B">
+                        <div class="sexo-masc">
+                            <label for="sexo">Sexo:</label>
+                            <select name="sexo" id="sexo">
+                                <option value="macho">Macho</option>
+                                <option value="hembra">Hembra</option>
+                            </select>
+                        </div>
+                        <div class="tamano-masc">
+                            <label for="tamano">Tamano:</label>
+                            <select name="tamano" id="tamano">
+                                <option value="">Indiferente</option>
+                                <option value="pequeno">Pequeño</option>
+                                <option value="mediano">Mediano</option>
+                                <option value="grande">Grande</option>
+                            </select>
+                        </div>
+                        <div class="castrado-masc">
+                            <label for="castrado">Castrado:</label>
+                            Si<input type="radio" value="si" name="castrado" id="yes" />
+                            No<input type="radio" value="no" name="castrado" id="not" />
+                        </div>
+                    </div>
+                    <div class="form-C">
+                        <input type="submit" value="Buscar" class="btn" />
+                    </div>
+                </form>
+            </div>
+            <div class="container" th:each="mascota : ${mascotas}">
+                <div class="A">
+                    <img th:if="${mascota.imagen != null}" th:src="${'/img/mascota?id=' + mascota.id}" class="foto-mascota"/>
+                </div>
+                <div class="B">
+                    <p>Nombre: <span th:text="${mascota.nombre}"></span></p>
+                    <p>Tipo de mascota: <span th:text="${mascota.tipo}"></span></p>
+                    <p>Raza: <span th:text="${mascota.raza}"></span></p>
+                    <p>Edad: <span th:text="${mascota.edad}"></span></p>
+                    <p>Sexo: <span th:text="${mascota.sexo}"></span></p>
+                    <p>Peso: <span th:text="${mascota.peso}">Kg</span></p>
+                    <p>Tamaño: <span th:text="${mascota.tamano}"></span></p>
+                    <p>¿Esta castrado? <span th:text="${mascota.castrado} ? 'Si' : 'No'"></span></p>
+                    <p>Dueño: <span th:text="${mascota.dueno}!=null? ${mascota.dueno.nombre}:''"></span></p>
+                    <a sec:authorize="isAuthenticated()" th:href="@{/adoptante/perfilmascota/__${mascota.id}__}">Ver Mascota</a>
+                </div>
+            </div>
+        </main>
+    </body>
+
+</html>

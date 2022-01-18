@@ -1,0 +1,187 @@
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #8e9aaf;
+  font-family: "Poppins", sans-serif;
+}
+header {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  background-color: #f4a261;
+  justify-content: center;
+  align-content: center;
+}
+
+h1 {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 80px;
+}
+
+
+ main {
+  background-color: #8e9aaf;
+  height: 75%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.logo-dueno {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo-dueno img {
+  width: 30%;
+}
+
+.soli {
+  display: inline;
+  margin: auto;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  width: 50%;
+  height: 40%;
+}
+
+.mascota {
+  display: grid;
+  grid-template-rows: 25% 75%;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-areas:
+    "header header header"
+    "foto info info";
+  margin: auto;
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+}
+
+.header {
+  border-top-left-radius: 40px ;
+  border-top-right-radius: 40px ;
+  grid-area: header;
+  text-align: center;
+  background-color: #f5ac70;
+}
+
+.body {
+  grid-area: info;
+  background-color: #5f6d86;
+  border-bottom-right-radius: 40px ;
+  
+}
+
+.perfil {
+  grid-area: foto;
+  background-color: #4a5568;
+  border-bottom-left-radius: 40px ;
+}
+
+.fondo-foto {
+  margin-top: 3%;
+  margin-left: 6%;
+  width: 90%;
+  height: 90%;
+  background-color: #556177;
+  border-radius: 100%;
+}
+
+.img {
+  border-radius: 100%;
+  width: 70%;
+  height: 70%;
+  margin-top: 13%;
+  margin-left: 15%;
+}
+
+.solicitante{
+    display: table;
+    background-color: #4a5568;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+
+div.container{
+  margin-top: 10%;
+  overflow: auto;
+  white-space: nowrap;
+}
+div.container a {
+  display: inline-block;
+}
+
+.container::-webkit-scrollbar {
+  width: 8px;     /* Tamaño del scroll en vertical */
+  height: 8px;    /* Tamaño del scroll en horizontal */
+
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.container::-webkit-scrollbar-thumb {
+  background: #f5ac70;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.container::-webkit-scrollbar-thumb:hover {
+  background: #f39e58;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.container::-webkit-scrollbar-thumb:active {
+  background-color: #f29040;
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+.container::-webkit-scrollbar-track {
+  background: #f7ba88;
+  border-radius: 4px;
+}
+
+.navegador {
+  width: 100%;
+  height: 14%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 60%;
+}
+nav a {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+  width: 10%;
+  background-color: white;
+  color: black!important;
+  border-radius: 5px;
+  text-decoration: none!important;
+}
+a:hover{
+  border: 1px solid black;
+}
+.regMasc{
+  width: 13%;
+}
+

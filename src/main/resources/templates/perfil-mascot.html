@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Perfil Mascota</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+
+        <link rel="stylesheet" href="/css/perfil-masc.css">
+    </head>
+    <body>
+        <header>  
+            <h1>ADOGCATME</h1>
+            <div class="img-logo"><img src="/assets/logo.png"></div>
+        </header>
+
+
+        <main>
+            <div class="navegador">
+                <button class="navegar">
+                    <nav>
+                        <a sec:authorize="isAuthenticated()" th:href="@{/adoptante/perfil}">Mi Perfil</a>
+                    </nav>
+                </button>
+                <button class="navegar">
+                    <nav>
+                        <a th:href="@{/adoptante/home}">Ir al Home</a>  </a>
+                    </nav>
+                </button>
+                <button class="navegar">
+                    <nav>
+                        <a sec:authorize="isAuthenticated()" th:href="@{/logout}">Cerrar Sesión</a>
+                    </nav>
+                </button>
+            </div>
+            <div class="contenedor">
+                <div class="perfil-izq">
+                    <div class="foto-masc">
+                        <img th:if="${mascota.imagen != null}" th:src="${'/img/mascota?id=' + mascota.id}" alt="">
+                    </div>
+
+                    <button type="button" class="btn">
+                        <nav>
+                            <a th:href="@{/solicitud/guardar/__${mascota.id}__}">¿Quieres adoptarme?</a>
+                        </nav>
+                    </button>
+                    <button type="button" class="btn">
+                        <nav>
+                            <a th:href="@{/adoptante/perfildueno/__${mascota.id}__}">Ver perfil de mi Dueño</a>
+                        </nav>
+                    </button>
+                </div>
+                <div class="contenido">
+                    <div class="titulo">
+                        <h3>Mis datos</h3>
+                    </div>
+                    <div class="texto">
+                        <div class="col-1">
+                            <h5>Tipo: </h5>
+                            <h5>Raza: </h5>
+                            <h5>Edad: </h5>
+                            <h5>Peso: </h5>
+                        </div>
+                        <div class="col-2">
+                            <h5><span th:text="${mascota.tipo}"></span></h5>
+                            <h5><span th:text="${mascota.raza}"></span></h5>
+                            <h5><span <span th:text="${mascota.edad}"></span></h5>
+                            <h5><span th:text="${mascota.peso}"></span>&nbspKg</h5>
+
+                        </div>
+                        <div class="col-3">
+                            <h5>Sexo: </h5>
+                            <h5>Tamaño: </h5>
+                            <h5>¿Esta&nbspcastrado?&nbsp<span th:text="${mascota.castrado} ? 'Si' : 'No'"></span></h5>
+                        </div>
+                        <div class="col-4">
+                            <h5><span th:text="${mascota.sexo}"></span></h5>
+                            <h5><span th:text="${mascota.tamano}"></span></h5>
+                            
+                        </div>
+                    </div>
+                    <div class="titulo">
+                        <h3>Comentarios</h3>
+                    </div>
+                    <div class="descripcion">
+                        <center><p><h5><span th:text="${mascota.descripcion}"></h5></span></p></center>
+                    </div>
+                </div>
+        </main>
+    </body>
+</html>

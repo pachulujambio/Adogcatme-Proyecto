@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Editar Perfil Mascota</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/perfil-mascota-edicion-dueno.css">
+</head>
+<body>
+    <header>  
+        <h1>ADOGCATME</h1>
+        <div class="logo"><img src="/assets/logo.png"></div>
+    </header>
+    <main>
+        <div class="contenedor">
+            <div class="contenido">        
+                <div class="titulo">
+                    <h3>Datos de tu mascota</h3>
+                </div>
+
+                <div class="datos-a-editar">
+                    <form th:action="@{/mascota/save}" method="POST" th:object="${mascota}" enctype="multipart/form-data">
+                        <input hidden  name="id" th:field="*{id}">
+                        <div class="foto-masc">
+                            <img th:if="${mascota.imagen != null}" th:src="${'/img/mascota?id=' + mascota.id}"  class="img-form">
+                            <div>
+                                <label for="archivo" id="image-mascota">Cambiar la foto de perfil</label>
+                            </div>
+                            <div>
+                                <input type="file" name= "archivo" id="archivo">
+                            </div>
+                            
+                        </div>
+                        <div class="B">
+                            <div class="nombre">
+                                <label for="nombre" class="label">Nombre:</label>
+                                <input type="text" id="nombre" th:field="*{nombre}">
+                            </div>
+                            <div class="tipo">
+                                <label for="tipo" class="label">Tipo:</label>
+                                <select name="tipo" id="tipo" th:field="*{tipo}">
+                                    <option value="perro">Perro</option>
+                                    <option value="gato">Gato</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            
+                            <div class="raza">
+                                <label for="raza" class="label">Raza:</label>
+                                <input type="text" id="raza" th:field="*{raza}">
+                            </div>
+    
+                            <div class="edad">
+                                <label for="edad" class="label">Edad:</label>
+                                <input type="number" id="edad" th:field="*{edad}" placeholder="años"> 
+                                
+                            </div>
+                            
+                            <div class="peso">
+                                <label for="peso" class="label">Peso:</label>
+                                <input type="number" id="peso" th:field="*{peso}" placeholder="kg">
+                            </div>
+                            
+                            <div class="tamano">
+                                <label for="tamano" class="label">Tamaño:</label>
+                                <select name="tamano" id="tamano" th:field="*{tamano}">
+                                    <option value="pequeno">Pequeño</option>
+                                    <option value="mediano">Mediano</option>
+                                    <option value="grande">Grande</option>
+                                </select>
+                            </div>
+                            
+                            <div class="sexo">
+                                <label for="sexo" class="label">Sexo:</label>
+                                <select name="sexo" id="sexo" th:field="*{sexo}">
+                                    <option value="macho">Macho</option>
+                                    <option value="hembra">Hembra</option>
+                                </select>
+                            </div>
+                            
+                            <div class="castrado">
+                                <label for="castrado" class="label">¿Está castrado/a?:</label>
+                                <div id="castrado">
+                                    <div class="yes">
+                                        Si <input type="radio" value="true" name="castrado" th:field="*{castrado}">
+                                    </div>
+                                    <div>
+                                        No <input type="radio" value="false" name="castrado" th:field="*{castrado}">
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="comentarios">
+                                <label for="comentarios" class="label">Comentarios:</label>
+                                <textarea name="comentario" id="comentarios" cols="30" rows="3" th:field="*{descripcion}"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="button-container">
+                            <button type="button" class="btn-actualizar btn">
+                                <input type="submit" value="Actualizar Información" class="btn actualizar">
+                            </button>
+                            <button type="button" class="btn-cancelar btn">
+                                <nav>
+                                    <a th:href="@{/dueno/home}">Cancelar</a>
+                                </nav>
+                            </button>
+                        </div>
+                    </form>
+                </div>    
+
+                
+            </div>    
+        </div>
+
+       
+    </main>
+</body>
+</html>

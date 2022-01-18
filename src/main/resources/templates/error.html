@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-AR" xmlns:th="http://www.thymeleaf.org" xmlns:sec"http://www.thymeleaf.org/extras/spring-security">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       
+       
+            <link rel="stylesheet" href="/css/error.css">
+        <title>Error</title>
+    </head>
+    
+<body>
+    <div class="error-cont">
+        <div class="img">
+            <img src="/assets/mad-cat.png"/>
+            <img src="/assets/mad-dog.png"/>
+        </div>
+        <h1> Lo sentimos, ha ocurrido un error</h1>
+
+        <p>
+            Por favor, asegurese de que la dirreccion web este escrita correctamente.
+            <br/>
+            O intente desde la 
+            <a th:href="@{/}">Home Page</a>
+            y navege por nuestra web hasta el sitio deseado.
+        </p>
+        <div>
+            <h1 th:text="'Error '+${codigo}"></h1>
+            <br>
+            <h2 th:text="${mensaje}"></h2>
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #8e9aaf;
+}
+header {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    background-color:#F4A261;
+    justify-content: center;
+}
+ main {
+     height: 75%;
+     width: 100%;
+ }
+h1 {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 80px;
+}
+
+.img-perfilAdop {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img-perfilAdop> img {
+
+    width: 30%;
+}
+
+.contenedor{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2%;
+}
+.contenedor-hijo {
+    width: 65%;
+    background-color: #E9C46A;
+    display: flex;
+    flex-direction: row;
+}  
+.datos-masc {
+    width: 50%;
+    margin-left: 7px;
+}
+.foto-masc {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.foto-masc> img {
+    width: 50%;
+    border-radius: 1%;
+    border: 1px solid black;
+}
+
+h2 {
+    height: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navegador {
+    width: 100%;
+    height: 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 60%;
+}
+nav a {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+    width: 10%;
+    background-color: white;
+    color: black!important;
+}
+a:hover{
+    border: 1px solid black;
+}

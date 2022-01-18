@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+   
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Adogcatme</title>
+</head>
+<body>
+    
+    <header> 
+        <div class="perro"> <img src="assets/perro.png"> </div> 
+        <h1>ADOGCATME</h1> 
+        <div class="gato"> <img src="assets/gato.png"> </div> 
+    </header>
+    <main>
+        <p th:if="${error}" th:text="${error}"></p> <!-- Se agrego esta linea que marca cuando el inicio de sesión es incorrecto -->
+        
+        <div class="container-botom">
+            <button type="button" class=" boton-adop">
+                <nav>
+                    <a th:href="@{registro/ingreso}" class="adop">Iniciar Sesion</a> 
+                </nav>
+             </button>
+        </div>
+
+        <div class="logo-container">
+            <img src="/assets/logo.png" class="logo">
+        </div>
+
+        <div class="container-botom">
+            <button type="button" class=" boton-dueno">
+                <nav>
+                    <a th:href="@{registro/usuario}" class="adop">Registrarse</a>
+                </nav>
+            </button>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

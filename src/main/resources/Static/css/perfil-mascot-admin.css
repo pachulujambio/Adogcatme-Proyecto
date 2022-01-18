@@ -1,0 +1,200 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #8e9aaf;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    background-color:#F4A261;
+    justify-content: center;
+}
+
+h1 {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 80px;
+}
+
+.img-logo {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img-logo img {
+    width: 30%;
+}
+
+main{
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    text-align: center;
+    font-size: 150%;
+}
+
+h3{
+    text-align: center;
+    font-size: 250%;
+}
+
+p{
+    font-size: 100%;
+    display: table;
+}
+
+.buton{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 10%;
+    margin-top: 2%;
+}
+
+.volver{
+    border-radius: 110px;
+    width: 15%;
+    height: 10%;
+    border: white 1px solid;
+    padding: 0.5%;
+}
+
+.volver:hover{
+    border-radius: 110px;
+    border: 1px black solid;
+    background-color: #ed9078;
+}
+
+nav a{
+    text-decoration: none!important;
+    font-family:'Poppins', sans-serif!important;
+    color: black!important;
+}
+
+
+.mascota-container{
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 2%;
+    border: 2px black solid;
+    border-radius: 50px;
+    padding: 1% 2% 2% 2%;
+}
+
+
+.btn-edicion{
+    background-color: rgba(211, 211, 211, 0.007);
+    border: rgba(211, 211, 211, 0) solid 1px;
+    padding: 1%;
+}
+
+.btn-edicion:hover{
+    border: black solid 1px;
+    border-radius: 90px;    
+    
+}
+
+.btn-edicion img{
+    width: 45px;
+    height: 45px;
+}
+
+
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.foto-masc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+    border-radius: 10px;
+    padding-right: 75px;
+    padding-left: 75px;
+    background-color: #4a5568;
+    height: 290px;
+    width: 300px;
+}
+
+.contenido{
+    width: 80%;
+}
+
+
+
+
+.foto-masc img{
+    width: 240px;
+    height: 240px;
+    border-radius: 120px;
+}
+
+
+
+
+.titulo{
+    background-color: #F4A261;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 1%;
+    padding-bottom: 0.5%;    
+}
+
+.texto {
+    background-color: #5f6d86;
+    margin-bottom: 2%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 33,3%);
+    grid-template-areas: 
+    "c1 c2"
+    "c1 c2"
+    "c1 c2";
+  
+}
+
+.c1{
+    font-size: x-large;
+    grid-area: c1;
+    align-content: right;
+}
+
+.c2{
+    font-size: x-large;
+    grid-area: c2;
+}
+
+.descp{
+    margin: 30px;
+    width: 95%;
+    height: 200px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.descripcion{
+    padding-block: 50px; /*Para hacer "figurar" el espacio, ver el agregado. Además, ver si se sigue usando*/
+    background-color: #5f6d86;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 40%;
+}
